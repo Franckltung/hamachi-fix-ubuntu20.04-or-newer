@@ -1,7 +1,7 @@
 #!/bin/bash
 function Install(){
 echo -e "\033[01;32mInstalling . . . . . . . . "
-gcc -O2 -Wall -o hamachid-patcher.so -shared hamachid-patcher.c
+gcc -O2 -Wall -fPIC -o hamachid-patcher.so -shared hamachid-patcher.c
 gcc -O2 -Wall -o hamachid hamachid.c
 sudo mv /opt/logmein-hamachi/bin/hamachid /opt/logmein-hamachi/bin/hamachid.org
 sudo cp hamachid-patcher.so /opt/logmein-hamachi/bin/

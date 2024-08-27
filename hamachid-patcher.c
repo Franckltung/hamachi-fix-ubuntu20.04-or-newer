@@ -950,7 +950,7 @@ static void init(void) {
         LOG("%s", error);
         exit(1);
     }
-    pfn_cfree = (pfn_cfree_t) dlsym(RTLD_NEXT, "cfree");
+    pfn_cfree = (pfn_cfree_t) dlsym(RTLD_NEXT, "free");
     if ((error = dlerror()) != NULL) {
         LOG("%s", error);
         exit(1);

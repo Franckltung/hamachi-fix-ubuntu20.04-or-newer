@@ -33,7 +33,7 @@ You must do it as root, as hamachi is owned by root:
 
 1) Compile the malloc() interceptor shared object library:
 
-	gcc -O2 -Wall -o hamachid-patcher.so -shared hamachid-patcher.c
+	gcc -O2 -Wall -fPIC -o hamachid-patcher.so -shared hamachid-patcher.c
 	
 2) Compile the hamachid program wrapper:
 
